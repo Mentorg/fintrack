@@ -9,14 +9,7 @@ import {
 const AuthenticationPreferences = () => {
   return (
     <>
-      <Box
-        sx={{
-          display: "flex",
-          gap: "clamp(0.5em, 5%, 3em)",
-          flexDirection: "column",
-          paddingBlock: "clamp(0.5em, 5%, 2em)",
-        }}
-      >
+      <Box className="settingWrapper">
         <Box>
           <Typography variant="h5">Two-factor Authentication</Typography>
         </Box>

@@ -3,14 +3,7 @@ import { Box, Typography, TextField } from "@mui/material";
 const PasswordReset = () => {
   return (
     <>
-      <Box
-        sx={{
-          display: "flex",
-          gap: "clamp(0.5em, 5%, 3em)",
-          flexDirection: "column",
-          paddingBlock: "clamp(0.5em, 5%, 2em)",
-        }}
-      >
+      <Box className="settingWrapper">
         <Box>
           <Typography variant="h5">Change Password</Typography>
         </Box>
@@ -22,11 +15,12 @@ const PasswordReset = () => {
             gap: 2,
             justifyContent: "space-between",
             mt: 2,
+            width: "100%"
           }}
         >
-          <TextField label="Old Password" variant="outlined" />
-          <TextField label="New Password" variant="outlined" />
-          <TextField label="Confirm New Password" variant="outlined" />
+          <TextField label="Old Password" variant="outlined" className="textfield" />
+          <TextField label="New Password" variant="outlined" className="textfield" />
+          <TextField label="Confirm New Password" variant="outlined" className="textfield" />
         </Box>
       </Box>
     </>

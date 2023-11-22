@@ -3,54 +3,10 @@ import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import Item from "../../../components/Item";
 import ContextMenu from "../../../components/ContextMenu";
 import CustomToolbar from "../../../components/CustomToolbar";
-import { liabilitiesData } from "../data/networth";
+import { liabilitiesSchema, liabilitiesData } from "../data/networth";
 
 const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", flex: 1, minWidth: 80, maxWidth: 80 },
-  { field: "name", headerName: "Name", flex: 1, minWidth: 160, maxWidth: 160 },
-  { field: "type", headerName: "Type", flex: 1, minWidth: 120, maxWidth: 120 },
-  {
-    field: "amount",
-    headerName: "Amount",
-    flex: 1,
-    minWidth: 110,
-    maxWidth: 110,
-  },
-  {
-    field: "interestRate",
-    headerName: "Interest Rate",
-    flex: 1,
-    minWidth: 140,
-    maxWidth: 140,
-  },
-  {
-    field: "minimumPayment",
-    headerName: "Minimum Payment",
-    flex: 1,
-    minWidth: 170,
-    maxWidth: 170,
-  },
-  {
-    field: "dueDate",
-    headerName: "Due Date",
-    flex: 1,
-    minWidth: 150,
-    maxWidth: 150,
-  },
-  {
-    field: "loanTerm",
-    headerName: "Loan Term",
-    flex: 1,
-    minWidth: 120,
-    maxWidth: 120,
-  },
-  {
-    field: "status",
-    headerName: "Status",
-    flex: 1,
-    minWidth: 100,
-    maxWidth: 160,
-  },
+  ...liabilitiesSchema,
   {
     field: "options",
     headerName: "",

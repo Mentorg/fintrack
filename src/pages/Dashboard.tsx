@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ColorModeContext, useMode } from "../assets/theme";
 import Sidebar from "../layouts/Sidebar";
 import { ThemeProvider } from "@emotion/react";
-import { CssBaseline } from "@mui/material";
+import { Box, CssBaseline } from "@mui/material";
 import Content from "../layouts/Content";
 import SidebarContext from "../context/SidebarContext";
 
@@ -14,12 +14,12 @@ export default function Dashboard() {
     <ColorModeContext.Provider value={{ toggleColorMode }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div className="app">
+        <Box className="app">
           <SidebarContext.Provider value={{ hideSidebar, setHideSidebar }}>
             <Sidebar />
             <Content />
           </SidebarContext.Provider>
-        </div>
+        </Box>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

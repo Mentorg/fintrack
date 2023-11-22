@@ -8,7 +8,10 @@ const SpendingBreakdown = () => {
     <Item
       title="Spending Breakdown"
       content={
-        <CardContent style={{ height: "400px", padding: 0 }} className="Mui-Chart">
+        <CardContent
+          style={{ height: "400px", padding: 0 }}
+          className="Mui-Chart"
+        >
           <SpendingBreakdownChart data={spendingBreakdownData} />
         </CardContent>
       }

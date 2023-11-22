@@ -1,7 +1,6 @@
 import { useState, useContext } from "react";
 import { Avatar, Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Sidebar as ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
-import { NavLink } from "react-router-dom";
 import {
   ExploreOutlined,
   DataUsageOutlined,
@@ -16,6 +15,7 @@ import {
 import { tokens } from "../assets/theme";
 import SidebarContext from "../context/SidebarContext";
 import Logo from "../assets/logo.svg";
+import MenuLink from "../components/MenuLink";
 
 export default function Sidebar() {
   const theme = useTheme();
@@ -24,14 +24,13 @@ export default function Sidebar() {
   const { hideSidebar, setHideSidebar } = useContext(SidebarContext);
 
   const handleClick = () => {
-    window.innerWidth <= 900 &&
-      setHideSidebar((prevState): boolean => {
-        if (prevState === true) {
-          return !prevState;
-        } else {
-          return prevState;
-        }
-      });
+    setHideSidebar((prevState): boolean => {
+      if (prevState === true) {
+        return !prevState;
+      } else {
+        return prevState;
+      }
+    });
   };
 
   return (
@@ -41,7 +40,8 @@ export default function Sidebar() {
         display: {
           xs: hideSidebar ? "block" : "none",
           sm: hideSidebar ? "block" : "none",
-          md: hideSidebar ? "none" : "block",
+          md: hideSidebar ? "block" : "none",
+          lg: hideSidebar ? "none" : "block",
         },
         "& .ps-sidebar-root": {
           border: "none",
@@ -63,11 +63,7 @@ export default function Sidebar() {
         <Menu
           menuItemStyles={{
             button: {
-              [`&:hover`]: {
-                backgroundColor: `${colors.primary[500]}`,
-                color: "#b6c8d9",
-              },
-              [`&.active`]: {
+              [`&:hover, &.active`]: {
                 backgroundColor: `${colors.primary[500]}`,
                 color: "#b6c8d9",
               },
@@ -89,7 +85,13 @@ export default function Sidebar() {
                 alignItems="center"
                 ml="15px"
               >
-                <Box sx={{ alignItems: "center", display: "flex", flexDirection: "row" }}>
+                <Box
+                  sx={{
+                    alignItems: "center",
+                    display: "flex",
+                    flexDirection: "row",
+                  }}
+                >
                   <Avatar src={Logo} sx={{ height: 25, width: 25 }} />
                   <Typography variant="h3" color={colors.grey[100]} ml={0.5}>
                     FinTrack
@@ -109,110 +111,62 @@ export default function Sidebar() {
             >
               Menu
             </Typography>
-            <MenuItem
+            <MenuLink
               icon={<ExploreOutlined />}
               onClick={handleClick}
-              component={<NavLink to="/" />}
-            >
-              <Typography
-                style={{
-                  color: colors.grey[100],
-                }}
-              >
-                Overview
-              </Typography>
-            </MenuItem>
-            <MenuItem
+              linkTo="/"
+              style={{ color: colors.grey[100] }}
+              text="Overview"
+            />
+            <MenuLink
               icon={<DataUsageOutlined />}
               onClick={handleClick}
-              component={<NavLink to="/budget" />}
-            >
-              <Typography
-                style={{
-                  color: colors.grey[100],
-                }}
-              >
-                Budget
-              </Typography>
-            </MenuItem>
-            <MenuItem
+              linkTo="/budget"
+              style={{ color: colors.grey[100] }}
+              text="Budget"
+            />
+            <MenuLink
               icon={<RequestQuoteOutlined />}
               onClick={handleClick}
-              component={<NavLink to="/bills" />}
-            >
-              <Typography
-                style={{
-                  color: colors.grey[100],
-                }}
-              >
-                Bills
-              </Typography>
-            </MenuItem>
-            <MenuItem
+              linkTo="/bills"
+              style={{ color: colors.grey[100] }}
+              text="Bills"
+            />
+            <MenuLink
               icon={<AssessmentOutlined />}
               onClick={handleClick}
-              component={<NavLink to="/reports" />}
-            >
-              <Typography
-                style={{
-                  color: colors.grey[100],
-                }}
-              >
-                Reports & Analytics
-              </Typography>
-            </MenuItem>
-            <MenuItem
+              linkTo="/reports"
+              style={{ color: colors.grey[100] }}
+              text="Reports & Analytics"
+            />
+            <MenuLink
               icon={<SwapVertOutlined />}
               onClick={handleClick}
-              component={<NavLink to="/debt" />}
-            >
-              <Typography
-                style={{
-                  color: colors.grey[100],
-                }}
-              >
-                Debt Management
-              </Typography>
-            </MenuItem>
-            <MenuItem
+              linkTo="/debt"
+              style={{ color: colors.grey[100] }}
+              text="Debt Management"
+            />
+            <MenuLink
               icon={<AttachMoneyOutlined />}
               onClick={handleClick}
-              component={<NavLink to="/investments" />}
-            >
-              <Typography
-                style={{
-                  color: colors.grey[100],
-                }}
-              >
-                Investments
-              </Typography>
-            </MenuItem>
-            <MenuItem
+              linkTo="/investments"
+              style={{ color: colors.grey[100] }}
+              text="Investments"
+            />
+            <MenuLink
               icon={<AccountBalanceOutlined />}
               onClick={handleClick}
-              component={<NavLink to="/networth" />}
-            >
-              <Typography
-                style={{
-                  color: colors.grey[100],
-                }}
-              >
-                Net Worth
-              </Typography>
-            </MenuItem>
-            <MenuItem
+              linkTo="/networth"
+              style={{ color: colors.grey[100] }}
+              text="Net Worth"
+            />
+            <MenuLink
               icon={<SettingsOutlined />}
               onClick={handleClick}
-              component={<NavLink to="/settings" />}
-            >
-              <Typography
-                style={{
-                  color: colors.grey[100],
-                }}
-              >
-                Settings
-              </Typography>
-            </MenuItem>
+              linkTo="/settings"
+              style={{ color: colors.grey[100] }}
+              text="Settings"
+            />
           </Box>
         </Menu>
       </ProSidebar>

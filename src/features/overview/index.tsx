@@ -70,19 +70,19 @@ export default function Overview() {
               chartType={[1, 4, 2, 5, 7, 2, 4, 6]}
             />
           </Grid>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} sm={12} md={12} lg={8}>
             <FinancialOverview />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} sm={12} md={6} lg={4}>
             <DebtOverview />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} sm={12} md={6} lg={4}>
             <TransactionHistory />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} sm={12} md={6} lg={4}>
             <SpendingBreakdown />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} sm={12} md={6} lg={4}>
             <BudgetAllocation />
           </Grid>
         </Grid>

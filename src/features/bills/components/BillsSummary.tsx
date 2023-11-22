@@ -4,74 +4,10 @@ import Item from "../../../components/Item";
 import NotificationButton from "./ui/NotificationButton";
 import ContextMenu from "../../../components/ContextMenu";
 import CustomToolbar from "../../../components/CustomToolbar";
-import { billsSummaryData } from "../data/bills";
+import { billsSummarySchema, billsSummaryData } from "../data/bills";
 
 const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", flex: 1, minWidth: 80, maxWidth: 80 },
-  {
-    field: "billName",
-    headerName: "Bill Name",
-    flex: 1,
-    minWidth: 160,
-    maxWidth: 160,
-  },
-  {
-    field: "vendor",
-    headerName: "Vendor",
-    flex: 1,
-    minWidth: 140,
-    maxWidth: 140,
-  },
-  {
-    field: "status",
-    headerName: "Status",
-    flex: 1,
-    minWidth: 110,
-    maxWidth: 110,
-  },
-  {
-    field: "paymentDate",
-    headerName: "Payment Date",
-    type: "string",
-    sortable: true,
-    flex: 1,
-    minWidth: 140,
-    maxWidth: 140,
-  },
-  {
-    field: "dueDate",
-    headerName: "Due Date",
-    description: "The date by which the bill payment is due.",
-    type: "string",
-    sortable: true,
-    flex: 1,
-    minWidth: 120,
-    maxWidth: 120,
-  },
-  {
-    field: "amount",
-    headerName: "Amount",
-    sortable: true,
-    flex: 1,
-    minWidth: 130,
-    maxWidth: 130,
-  },
-  {
-    field: "frequency",
-    headerName: "Frequency",
-    sortable: true,
-    flex: 1,
-    minWidth: 130,
-    maxWidth: 130,
-  },
-  {
-    field: "paymentMethod",
-    headerName: "Payment Method",
-    sortable: true,
-    flex: 1,
-    minWidth: 160,
-    maxWidth: 160,
-  },
+  ...billsSummarySchema,
   {
     field: "notification",
     headerName: "Notification",
@@ -87,22 +23,6 @@ const columns: GridColDef[] = [
         </Box>
       );
     },
-  },
-  {
-    field: "category",
-    headerName: "Category",
-    sortable: true,
-    flex: 1,
-    minWidth: 130,
-    maxWidth: 130,
-  },
-  {
-    field: "notes",
-    headerName: "Notes",
-    sortable: false,
-    flex: 1,
-    minWidth: 160,
-    maxWidth: 190,
   },
   {
     field: "recordPayment",

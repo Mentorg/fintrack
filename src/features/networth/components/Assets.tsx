@@ -3,59 +3,10 @@ import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import Item from "../../../components/Item";
 import ContextMenu from "../../../components/ContextMenu";
 import CustomToolbar from "../../../components/CustomToolbar";
-import { assetsData } from "../data/networth";
+import { assetsSchema, assetsData } from "../data/networth";
 
 const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", flex: 1, minWidth: 80, maxWidth: 80 },
-  {
-    field: "assetName",
-    headerName: "Name",
-    flex: 1,
-    minWidth: 160,
-    maxWidth: 160,
-  },
-  {
-    field: "assetType",
-    headerName: "Type",
-    flex: 1,
-    minWidth: 120,
-    maxWidth: 120,
-  },
-  {
-    field: "currentValue",
-    headerName: "Current Value",
-    flex: 1,
-    minWidth: 140,
-    maxWidth: 140,
-  },
-  {
-    field: "currency",
-    headerName: "Currency",
-    flex: 1,
-    minWidth: 120,
-    maxWidth: 120,
-  },
-  {
-    field: "acquisitionDate",
-    headerName: "Acquisition Date",
-    flex: 1,
-    minWidth: 160,
-    maxWidth: 160,
-  },
-  {
-    field: "apprOrDepr",
-    headerName: "Appreciation/Depreciation",
-    flex: 1,
-    minWidth: 210,
-    maxWidth: 100,
-  },
-  {
-    field: "description",
-    headerName: "Remaining Term",
-    flex: 1,
-    minWidth: 160,
-    maxWidth: 160,
-  },
+  ...assetsSchema,
   {
     field: "options",
     headerName: "",

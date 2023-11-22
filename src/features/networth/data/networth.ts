@@ -18,6 +18,59 @@ const netWorthHistoryData = [
   },
 ];
 
+const assetsSchema = [
+  { field: "id", headerName: "ID", flex: 1, minWidth: 80, maxWidth: 80 },
+  {
+    field: "assetName",
+    headerName: "Name",
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 160,
+  },
+  {
+    field: "assetType",
+    headerName: "Type",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 120,
+  },
+  {
+    field: "currentValue",
+    headerName: "Current Value",
+    flex: 1,
+    minWidth: 140,
+    maxWidth: 140,
+  },
+  {
+    field: "currency",
+    headerName: "Currency",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 120,
+  },
+  {
+    field: "acquisitionDate",
+    headerName: "Acquisition Date",
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 160,
+  },
+  {
+    field: "apprOrDepr",
+    headerName: "Appreciation/Depreciation",
+    flex: 1,
+    minWidth: 210,
+    maxWidth: 100,
+  },
+  {
+    field: "description",
+    headerName: "Remaining Term",
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 160,
+  },
+];
+
 const assetsData = [
   {
     id: 1,
@@ -100,6 +153,54 @@ const assetsData = [
     description: "Digital currency",
   },
 ];
+
+const liabilitiesSchema = [
+  { field: "id", headerName: "ID", flex: 1, minWidth: 80, maxWidth: 80 },
+  { field: "name", headerName: "Name", flex: 1, minWidth: 160, maxWidth: 160 },
+  { field: "type", headerName: "Type", flex: 1, minWidth: 120, maxWidth: 120 },
+  {
+    field: "amount",
+    headerName: "Amount",
+    flex: 1,
+    minWidth: 110,
+    maxWidth: 110,
+  },
+  {
+    field: "interestRate",
+    headerName: "Interest Rate",
+    flex: 1,
+    minWidth: 140,
+    maxWidth: 140,
+  },
+  {
+    field: "minimumPayment",
+    headerName: "Minimum Payment",
+    flex: 1,
+    minWidth: 170,
+    maxWidth: 170,
+  },
+  {
+    field: "dueDate",
+    headerName: "Due Date",
+    flex: 1,
+    minWidth: 150,
+    maxWidth: 150,
+  },
+  {
+    field: "loanTerm",
+    headerName: "Loan Term",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 120,
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    flex: 1,
+    minWidth: 100,
+    maxWidth: 160,
+  },
+]
 
 const liabilitiesData = [
   {
@@ -249,4 +350,11 @@ const assetsVsLiabilitiesData = [
   },
 ];
 
-export { netWorthHistoryData, assetsData, liabilitiesData, assetsVsLiabilitiesData };
+export {
+  netWorthHistoryData,
+  assetsSchema,
+  assetsData,
+  liabilitiesSchema,
+  liabilitiesData,
+  assetsVsLiabilitiesData,
+};

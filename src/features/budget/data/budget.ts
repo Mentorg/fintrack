@@ -1,3 +1,98 @@
+const incomeSourcesSchema = [
+  {
+    field: "id",
+    headerName: "ID",
+    type: "number",
+    flex: 1,
+    minWidth: 80,
+    maxWidth: 80,
+  },
+  {
+    field: "sourceName",
+    headerName: "Source name",
+    type: "string",
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 160,
+    editable: true,
+  },
+  {
+    field: "amount",
+    headerName: "Amount ($)",
+    type: "number",
+    flex: 1,
+    minWidth: 110,
+    maxWidth: 110,
+    editable: true,
+  },
+  {
+    field: "paymentMethod",
+    headerName: "Payment Method",
+    type: "string",
+    sortable: true,
+    flex: 0.3,
+    minWidth: 160,
+    maxWidth: 150,
+    editable: true,
+  },
+  {
+    field: "frequency",
+    headerName: "Frequency",
+    type: "string",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 90,
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    type: "boolean",
+    flex: 1,
+    minWidth: 100,
+    maxWidth: 100,
+  },
+  {
+    field: "received",
+    headerName: "Received",
+    type: "string",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 100,
+  },
+  {
+    field: "category",
+    headerName: "Category",
+    type: "string",
+    flex: 1,
+    minWidth: 140,
+    maxWidth: 140,
+  },
+  {
+    field: "description",
+    headerName: "Description",
+    type: "string",
+    flex: 1,
+    minWidth: 140,
+    maxWidth: 140,
+  },
+  {
+    field: "nextPayment",
+    headerName: "Next Payment",
+    type: "string",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 120,
+  },
+  {
+    field: "taxRate",
+    headerName: "Tax Rate (%)",
+    type: "number",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 100,
+  },
+];
+
 const incomeSourcesData = [
   {
     id: 1,
@@ -181,6 +276,55 @@ const expenseLimitsData = [
   { title: "Charity and Donations", currentValue: "500", limit: "1,000" },
 ];
 
+const savingsSchema = [
+  { field: "id", headerName: "ID", flex: 1, minWidth: 80, maxWidth: 80 },
+  {
+    field: "title",
+    headerName: "Title",
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 190,
+  },
+  {
+    field: "amount",
+    headerName: "Amount",
+    flex: 1,
+    minWidth: 110,
+    maxWidth: 130,
+  },
+  {
+    field: "description",
+    headerName: "Description",
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 190,
+  },
+  { field: "goal", headerName: "Goal", flex: 1, minWidth: 110, maxWidth: 130 },
+  {
+    field: "targetDate",
+    headerName: "Target Date",
+    flex: 1,
+    minWidth: 130,
+    maxWidth: 160,
+  },
+  { field: "progress", headerName: "Progress" },
+  {
+    field: "category",
+    headerName: "Category",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 100,
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    description: "This column has a value getter and is not sortable.",
+    flex: 1,
+    minWidth: 130,
+    maxWidth: 160,
+  },
+];
+
 const savingsData = [
   {
     id: 1,
@@ -228,4 +372,11 @@ const savingsData = [
   },
 ];
 
-export { incomeSourcesData, budgetAllocationData, expenseLimitsData, savingsData };
+export {
+  incomeSourcesSchema,
+  incomeSourcesData,
+  budgetAllocationData,
+  expenseLimitsData,
+  savingsSchema,
+  savingsData,
+};

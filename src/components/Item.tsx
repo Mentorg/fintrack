@@ -15,7 +15,7 @@ const Item = ({ title, content, height = 400, padding = 1 }: ItemProps) => {
 
   return (
     <Card
-      style={{
+      sx={{
         background: colors.primary[400],
         height: `${height}px`,
         padding: `${padding}rem`,

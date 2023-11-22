@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import {
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -16,10 +16,11 @@ import Settings from "./features/settings";
 import Investments from "./features/investments";
 import NetWorth from "./features/networth";
 import Overview from "./features/overview";
+import Error from "./pages/Error";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Dashboard />}>
+    <Route path="/" element={<Dashboard />} errorElement={<Error />}>
       <Route path="/" element={<Overview />} />
       <Route path="/budget" element={<Budget />} />
       <Route path="/bills" element={<Bills />} />
@@ -27,7 +28,6 @@ const router = createBrowserRouter(
       <Route path="/debt" element={<Debt />} />
       <Route path="/investments" element={<Investments />} />
       <Route path="/networth" element={<NetWorth />} />
-      <Route path="/resources" element={<Reports />} />
       <Route path="/settings" element={<Settings />} />
     </Route>
   )

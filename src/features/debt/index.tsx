@@ -13,16 +13,16 @@ export default function DebtManagement() {
           <Typography variant="h6">Efficiently manage and conquer your debts over time</Typography>
         </Box>
         <Grid container spacing={2} sx={{ width: "100%" }}>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={6} lg={8}>
             <DebtOverview />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <DebtPaymentHistory />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={6}>
             <DebtToIncomeRatio />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={6}>
             <DebtBurdenRatio />
           </Grid>
         </Grid>

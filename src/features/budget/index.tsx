@@ -13,16 +13,16 @@ export default function Budget() {
           <Typography variant="h6">Track and control your spending</Typography>
         </Box>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={6} lg={8}>
             <IncomeSources />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <BudgetAllocation />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={6}>
             <ExpenseLimits />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={6}>
             <Savings />
           </Grid>
         </Grid>

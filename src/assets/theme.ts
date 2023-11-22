@@ -123,6 +123,15 @@ export const themeSettings = (mode: "dark" | "light") => {
   const colors = tokens(mode);
 
   return {
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 933,
+        lg: 1200,
+        xl: 1536,
+      }
+    },
     palette: {
       mode: mode,
       ...(mode === "dark"

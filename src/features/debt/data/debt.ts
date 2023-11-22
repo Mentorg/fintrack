@@ -1,3 +1,86 @@
+const debtOverviewSchema = [
+  { field: "id", headerName: "ID", flex: 1, minWidth: 80, maxWidth: 80 },
+  {
+    field: "creditor",
+    headerName: "Creditor",
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 160,
+  },
+  {
+    field: "debtType",
+    headerName: "Debt Type",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 120,
+  },
+  {
+    field: "balance",
+    headerName: "Balance",
+    flex: 1,
+    minWidth: 110,
+    maxWidth: 110,
+  },
+  {
+    field: "interestRate",
+    headerName: "Interest",
+    flex: 1,
+    minWidth: 110,
+    maxWidth: 110,
+  },
+  {
+    field: "minimumPayment",
+    headerName: "Min. Payment",
+    flex: 1,
+    minWidth: 140,
+    maxWidth: 140,
+  },
+  {
+    field: "dueDate",
+    headerName: "Due Date",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 120,
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    flex: 1,
+    minWidth: 100,
+    maxWidth: 100,
+  },
+  {
+    field: "remainingTerm",
+    headerName: "Remaining Term",
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 160,
+  },
+  {
+    field: "frequency",
+    headerName: "Frequency",
+    sortable: true,
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 120,
+  },
+  {
+    field: "paymentMethod",
+    headerName: "Payment Method",
+    sortable: true,
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 130,
+  },
+  {
+    field: "paymentProgress",
+    headerName: "Progress",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 120,
+  },
+];
+
 const debtOverviewData = [
   {
     id: 1,
@@ -110,6 +193,55 @@ const debtOverviewData = [
     frequency: "Monthly",
     paymentMethod: "PayPal",
     paymentProgress: "50%",
+  },
+];
+
+const paymentHistorySchema = [
+  { field: "id", headerName: "ID", flex: 1, minWidth: 80, maxWidth: 80 },
+  { field: "date", headerName: "Date", flex: 1, minWidth: 120, maxWidth: 120 },
+  {
+    field: "description",
+    headerName: "Description",
+    flex: 1,
+    minWidth: 150,
+    maxWidth: 150,
+  },
+  { field: "type", headerName: "Type", flex: 1, minWidth: 120, maxWidth: 120 },
+  {
+    field: "category",
+    headerName: "Category",
+    flex: 1,
+    minWidth: 130,
+    maxWidth: 160,
+  },
+  {
+    field: "amount",
+    headerName: "Amount",
+    flex: 1,
+    minWidth: 110,
+    maxWidth: 110,
+  },
+  {
+    field: "paymentMethod",
+    headerName: "Payment Method",
+    sortable: true,
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 130,
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    flex: 1,
+    minWidth: 100,
+    maxWidth: 100,
+  },
+  {
+    field: "reference",
+    headerName: "Reference Number",
+    flex: 1,
+    minWidth: 170,
+    maxWidth: 170,
   },
 ];
 
@@ -246,7 +378,7 @@ const debtToIncomeRatioData = [
     income: 196,
     debt: 12,
   },
-]
+];
 
 const debtBurdenRatioData = [
   {
@@ -267,4 +399,11 @@ const debtBurdenRatioData = [
   },
 ];
 
-export { debtOverviewData, paymentHistoryData, debtToIncomeRatioData, debtBurdenRatioData };
+export {
+  debtOverviewSchema,
+  debtOverviewData,
+  paymentHistorySchema,
+  paymentHistoryData,
+  debtToIncomeRatioData,
+  debtBurdenRatioData,
+};

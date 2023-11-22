@@ -105,6 +105,66 @@ const portfolioOverviewData = [
   },
 ];
 
+const investmentDetailsSchema = [
+  { field: "id", headerName: "ID", flex: 1, minWidth: 80, maxWidth: 80 },
+  {
+    field: "investmentName",
+    headerName: "Name",
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 160,
+  },
+  {
+    field: "investmentType",
+    headerName: "Type",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 120,
+  },
+  {
+    field: "investmentSymbol",
+    headerName: "Symbol",
+    flex: 1,
+    minWidth: 110,
+    maxWidth: 110,
+  },
+  {
+    field: "purchaseDate",
+    headerName: "Purchase Date",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 120,
+  },
+  {
+    field: "sharesOrAmount",
+    headerName: "Shares/Amount",
+    flex: 1,
+    minWidth: 110,
+    maxWidth: 110,
+  },
+  {
+    field: "purchasePrice",
+    headerName: "Purchase Price",
+    flex: 1,
+    minWidth: 140,
+    maxWidth: 140,
+  },
+  {
+    field: "currentValue",
+    headerName: "Current Value",
+    flex: 1,
+    minWidth: 100,
+    maxWidth: 100,
+  },
+  {
+    field: "gainOrLoss",
+    headerName: "Gain/Loss",
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 160,
+  },
+];
+
 const investmentDetailsData = [
   {
     id: 1,
@@ -249,6 +309,75 @@ const investmentPerformanceData = [
   },
 ];
 
+const transactionHistorySchema = [
+  { field: "id", headerName: "ID", flex: 1, minWidth: 80, maxWidth: 80 },
+  {
+    field: "transactionDate",
+    headerName: "Transaction Date",
+    type: "Date",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 120,
+    editable: true,
+  },
+  {
+    field: "transactionType",
+    headerName: "Transaction Type",
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 120,
+    editable: true,
+  },
+  {
+    field: "stockSymbol",
+    headerName: "Stock Symbol",
+    flex: 1,
+    minWidth: 110,
+    maxWidth: 110,
+    editable: true,
+  },
+  {
+    field: "stockName",
+    headerName: "Stock Name",
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 160,
+    editable: true,
+  },
+  {
+    field: "quantity",
+    headerName: "Quantity",
+    flex: 1,
+    minWidth: 110,
+    maxWidth: 110,
+    editable: true,
+  },
+  {
+    field: "pricePerShare",
+    headerName: "Price per Share",
+    flex: 1,
+    minWidth: 140,
+    maxWidth: 140,
+    editable: true,
+  },
+  {
+    field: "totalCost",
+    headerName: "Total Cost",
+    flex: 1,
+    minWidth: 100,
+    maxWidth: 100,
+    editable: true,
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 160,
+    editable: true,
+  },
+];
+
 const transactionHistoryData = [
   {
     id: 1,
@@ -342,7 +471,9 @@ const transactionHistoryData = [
 
 export {
   portfolioOverviewData,
+  investmentDetailsSchema,
   investmentDetailsData,
   investmentPerformanceData,
+  transactionHistorySchema,
   transactionHistoryData,
 };

@@ -1,20 +1,20 @@
-import { useRouteError } from "react-router-dom";
-
+import { Box, Typography } from "@mui/material";
 interface ErrorObject {
   statusText: string;
   message: string;
 }
 
 export default function Error() {
-  const error = useRouteError() as ErrorObject;
 
   return (
-    <div id="error-page">
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred!</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
-    </div>
+    <Box className="error-page" sx={{ padding: "1rem" }}>
+      <Box>
+        <Typography variant="h1" fontWeight={600} textAlign="center">404</Typography>
+      </Box>
+      <Typography variant="h4" mt={4} textAlign="center">Sorry, but that's not a valid link!</Typography>
+      <Typography variant="h6" fontWeight={400} textAlign="center">
+        It may have been removed, had its name changed, or the address may be incorrect.
+      </Typography>
+    </Box>
   )
 }

@@ -1,9 +1,9 @@
-/* * {
-  background-image: url(https://source.unsplash.com/random/1920x1080/?nature);
-  background-size: cover;
-} */
-
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 html,
 body,
@@ -28,19 +28,16 @@ main {
   width: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #e0e0e0;
   border-radius: 20px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background: #888;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
@@ -55,7 +52,16 @@ aside { height: 100%; }
   width: unset !important;
 }
 
-@media (max-width: 899px) {
+.error-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  padding: 2rem;
+}
+
+@media (max-width: 932px) {
   .app {
     display: grid;
     grid-template-columns: 1fr;

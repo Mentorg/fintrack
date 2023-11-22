@@ -1,3 +1,95 @@
+const billsSummarySchema = [
+  { field: "id", headerName: "ID", flex: 1, minWidth: 80, maxWidth: 80 },
+  {
+    field: "billName",
+    headerName: "Bill Name",
+    type: "string",
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 160,
+  },
+  {
+    field: "vendor",
+    headerName: "Vendor",
+    type: "string",
+    flex: 1,
+    minWidth: 140,
+    maxWidth: 140,
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    type: "string",
+    flex: 1,
+    minWidth: 110,
+    maxWidth: 110,
+  },
+  {
+    field: "paymentDate",
+    headerName: "Payment Date",
+    type: "string",
+    sortable: true,
+    flex: 1,
+    minWidth: 140,
+    maxWidth: 140,
+  },
+  {
+    field: "dueDate",
+    headerName: "Due Date",
+    description: "The date by which the bill payment is due.",
+    type: "string",
+    sortable: true,
+    flex: 1,
+    minWidth: 120,
+    maxWidth: 120,
+  },
+  {
+    field: "amount",
+    headerName: "Amount",
+    type: "number",
+    sortable: true,
+    flex: 1,
+    minWidth: 130,
+    maxWidth: 130,
+  },
+  {
+    field: "frequency",
+    headerName: "Frequency",
+    type: "string",
+    sortable: true,
+    flex: 1,
+    minWidth: 130,
+    maxWidth: 130,
+  },
+  {
+    field: "paymentMethod",
+    headerName: "Payment Method",
+    type: "string",
+    sortable: true,
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 160,
+  },
+  {
+    field: "category",
+    headerName: "Category",
+    type: "string",
+    sortable: true,
+    flex: 1,
+    minWidth: 130,
+    maxWidth: 130,
+  },
+  {
+    field: "notes",
+    headerName: "Notes",
+    type: "string",
+    sortable: false,
+    flex: 1,
+    minWidth: 160,
+    maxWidth: 190,
+  },
+];
+
 const billsSummaryData = [
   {
     id: 1,
@@ -378,4 +470,4 @@ const billPaymentTrendsData = [
   },
 ];
 
-export { billsSummaryData, billPaymentTrendsData };
+export { billsSummarySchema, billsSummaryData, billPaymentTrendsData };
