@@ -1,0 +1,45 @@
+.settingWrapper {
+    display: flex;
+    gap: clamp(0.5em, 5%, 3em);
+    flex-direction: column;
+    padding-block: clamp(0.5em, 5%, 2em);
+}
+
+.settingLayout {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  row-gap: 0.5rem;
+}
+
+.threeRows { grid-template-rows: repeat(3, 1fr); }
+
+.settingItem {
+  display: flex;
+  flex-direction: column;
+  justify-self: left;
+  margin-block: 0.5;
+}
+
+.settingItem.btn {
+  grid-column-start: 3;
+  margin-left: auto
+}
+
+.textfield {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .settingLayout {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 932px) {  
+  .textfield {
+    flex: auto;
+  }
+}
