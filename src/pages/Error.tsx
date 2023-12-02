@@ -1,8 +1,4 @@
 import { Box, Typography } from "@mui/material";
-interface ErrorObject {
-  statusText: string;
-  message: string;
-}
 
 export default function Error() {
 

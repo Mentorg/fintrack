@@ -17,6 +17,7 @@ const Item = ({ title, content, height = 400, padding = 1 }: ItemProps) => {
     <Card
       sx={{
         background: colors.primary[400],
+        boxShadow: 4,
         height: `${height}px`,
         padding: `${padding}rem`,
         margin: "0 auto",

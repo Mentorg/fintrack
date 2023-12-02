@@ -78,6 +78,8 @@ export const SpendingBreakdownChart = ({ data }: { data: BarDatum[] }) => {
           container: {
             background: `${colors.primary[500]}`,
             color: `${colors.primary[100]}`,
+            position: "fixed",
+            maxWidth: "10rem"
           },
         },
       }}

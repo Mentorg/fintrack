@@ -36,7 +36,7 @@ export default function Sidebar() {
   return (
     <Box
       sx={{
-        borderRight: `1px solid ${colors.primary[500]} !important`,
+        boxShadow: 4,
         display: {
           xs: hideSidebar ? "block" : "none",
           sm: hideSidebar ? "block" : "none",
@@ -65,7 +65,12 @@ export default function Sidebar() {
             button: {
               [`&:hover, &.active`]: {
                 backgroundColor: `${colors.primary[500]}`,
-                color: "#b6c8d9",
+                "& .ps-menu-label p": {
+                  color: `${colors.blueAccent[300]} !important`,
+                },
+                "& .ps-menu-icon svg": {
+                  fill: `${colors.blueAccent[300]} !important`
+                },
               },
             },
           }}
@@ -74,7 +79,7 @@ export default function Sidebar() {
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlined /> : undefined}
             style={{
-              margin: "10px 0 20px 0",
+              margin: "20px 0 20px 0",
               color: colors.grey[100],
             }}
           >
@@ -93,7 +98,7 @@ export default function Sidebar() {
                   }}
                 >
                   <Avatar src={Logo} sx={{ height: 25, width: 25 }} />
-                  <Typography variant="h3" color={colors.grey[100]} ml={0.5}>
+                  <Typography variant="h3" color={colors.grey[100]} ml={1}>
                     FinTrack
                   </Typography>
                 </Box>
@@ -103,16 +108,16 @@ export default function Sidebar() {
               </Box>
             )}
           </MenuItem>
-          <Box paddingInline={isCollapsed ? undefined : "5%"}>
+          <Box paddingInline={isCollapsed ? undefined : "5%"} sx={{ marginBlock: 5 }}>
             <Typography
               variant="h6"
               color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "15px 0 5px 30px" }}
             >
               Menu
             </Typography>
             <MenuLink
-              icon={<ExploreOutlined />}
+              icon={<ExploreOutlined color="secondary" />}
               onClick={handleClick}
               linkTo="/"
               style={{ color: colors.grey[100] }}

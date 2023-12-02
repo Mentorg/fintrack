@@ -13,6 +13,7 @@ body,
 main {
   height: max-content;
   overflow: auto;
+  padding: 0 !important;
   width: 100%;
 }
 
