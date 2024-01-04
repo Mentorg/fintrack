@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
 import { tokens } from "../assets/theme";
-import { messagesData, notificationsData } from "../data/communicationsData";
+import { messagesData } from "../data/communicationsData";
 
 export default function Messages() {
   const [openMessages, setOpenMessages] = useState<null | HTMLElement>(null);

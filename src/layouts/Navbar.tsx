@@ -67,7 +67,7 @@ export default function Navbar() {
           </IconButton>
           <Box
             sx={{
-              border: `2px solid ${colors.grey[700]}`,
+              border: `2px solid ${colors.primary[500]}`,
               borderRadius: "4px",
               display: "flex",
               width: "min(75%, 400px)",
@@ -75,7 +75,7 @@ export default function Navbar() {
           >
             <InputBase sx={{ flex: 1, ml: 2 }} placeholder="Search" />
             <IconButton type="button" sx={{ p: 1 }}>
-              <SearchIcon sx={{ color: colors.grey[700] }} />
+              <SearchIcon sx={{ color: colors.primary[500] }} />
             </IconButton>
           </Box>
           <Box sx={{ display: "flex", gap: 1.5 }}>
