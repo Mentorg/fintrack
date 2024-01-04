@@ -17,8 +17,9 @@ Here is a working live demo: https://mentorg.github.io/fintrack/
 
 ### Previews
 ---
-<img src="https://github.com/Mentorg/fintrack/assets/18701723/33ad4346-72f6-478f-b7b8-af8bcd90ee64" alt="Fintrack light mode" align="left" width="50%">
-<img src="https://github.com/Mentorg/fintrack/assets/18701723/a05e93f6-51ec-416e-ac44-e4dc00cfe343" alt="Fintrack light mode" align="right" width="50%">
+<div  align="center">
+<img  src="https://github.com/Mentorg/fintrack/assets/18701723/33ad4346-72f6-478f-b7b8-af8bcd90ee64"  alt="Fintrack light mode"  width="50%"><img  src="https://github.com/Mentorg/fintrack/assets/18701723/a05e93f6-51ec-416e-ac44-e4dc00cfe343"  alt="Fintrack light mode"  width="50%">
+</div>
 <p>&nbsp;</p>
 
 ### Features
